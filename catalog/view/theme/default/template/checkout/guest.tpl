@@ -4,10 +4,14 @@
   <input type="text" name="firstname" value="<?php echo $firstname; ?>" class="large-field" />
   <br />
   <br />
+  <!--2015/04/15 -->
+  <input type="text" name="lastname" value="<?php echo $lastname; ?>" class="large-field"   style="display: none;"/>
+  <!--
   <span class="required">*</span> <?php echo $entry_lastname; ?><br />
   <input type="text" name="lastname" value="<?php echo $lastname; ?>" class="large-field" />
   <br />
   <br />
+  -->  
   <span class="required">*</span> <?php echo $entry_email; ?><br />
   <input type="text" name="email" value="<?php echo $email; ?>" class="large-field" />
   <br />
@@ -16,17 +20,25 @@
   <input type="text" name="telephone" value="<?php echo $telephone; ?>" class="large-field" />
   <br />
   <br />
+  <!--2015/04/15 -->
+  <input type="text" name="fax" value="<?php echo $fax; ?>" class="large-field" style="display: none;"/>
+  <!--  
   <?php echo $entry_fax; ?><br />
   <input type="text" name="fax" value="<?php echo $fax; ?>" class="large-field" />
+  -->
   <br />
   <br />
 </div>
 <div class="right">
   <h2><?php echo $text_your_address; ?></h2>
+  <!--2015/04/15 -->
+  <input type="text" name="company" value="<?php echo $company; ?>" class="large-field" style="display: none;"/>
+  <!--
   <?php echo $entry_company; ?><br />
   <input type="text" name="company" value="<?php echo $company; ?>" class="large-field" />
   <br />
   <br />
+  -->
   <div style="display: <?php echo (count($customer_groups) > 1 ? 'table-row' : 'none'); ?>;"> <?php echo $entry_customer_group; ?><br />
     <?php foreach ($customer_groups as $customer_group) { ?>
     <?php if ($customer_group['customer_group_id'] == $customer_group_id) { ?>
@@ -41,11 +53,15 @@
     <?php } ?>
     <br />
   </div>
+  <!--2015/04/15-->  
+    <input type="text" name="company_id" value="<?php echo $company_id; ?>" class="large-field" style="display: none;"/>
+  <!--  
   <div id="company-id-display"><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?><br />
     <input type="text" name="company_id" value="<?php echo $company_id; ?>" class="large-field" />
     <br />
     <br />
   </div>
+  -->
   <div id="tax-id-display"><span id="tax-id-required" class="required">*</span> <?php echo $entry_tax_id; ?><br />
     <input type="text" name="tax_id" value="<?php echo $tax_id; ?>" class="large-field" />
     <br />
@@ -55,20 +71,32 @@
   <input type="text" name="address_1" value="<?php echo $address_1; ?>" class="large-field" />
   <br />
   <br />
+  <!--2015/04/15 -->
+  <input type="text" name="address_2" value="<?php echo $address_2; ?>" class="large-field" style="display: none;"/>
+  <!--
   <?php echo $entry_address_2; ?><br />
   <input type="text" name="address_2" value="<?php echo $address_2; ?>" class="large-field" />
   <br />
   <br />
+  -->
+  <!--2015/04/15 -->
+  <input type="text" name="city" value="<?php echo $city; ?>" class="large-field" style="display: none;"/>
+  <!--
   <span class="required">*</span> <?php echo $entry_city; ?><br />
   <input type="text" name="city" value="<?php echo $city; ?>" class="large-field" />
   <br />
   <br />
+  -->
   <span id="payment-postcode-required" class="required">*</span> <?php echo $entry_postcode; ?><br />
   <input type="text" name="postcode" value="<?php echo $postcode; ?>" class="large-field" />
   <br />
   <br />
+  <!--2015/04/15 -->
+  <select name="country_id" class="large-field" style="display: none;">
+  <!--
   <span class="required">*</span> <?php echo $entry_country; ?><br />
   <select name="country_id" class="large-field">
+  -->
     <option value=""><?php echo $text_select; ?></option>
     <?php foreach ($countries as $country) { ?>
     <?php if ($country['country_id'] == $country_id) { ?>
@@ -80,11 +108,17 @@
   </select>
   <br />
   <br />
+ <!--2015/04/15 -->
+ <select name="zone_id" class="large-field" style="display: none;">
+          <option value=""></option>
+</select>
+  <!--
   <span class="required">*</span> <?php echo $entry_zone; ?><br />
   <select name="zone_id" class="large-field">
   </select>
   <br />
   <br />
+  -->
   <br />
 </div>
 <?php if ($shipping_required) { ?>

@@ -23,16 +23,28 @@
       <td><span class="required">*</span> <?php echo $entry_firstname; ?></td>
       <td><input type="text" name="firstname" value="" class="large-field" /></td>
     </tr>
+    <!--2015/04/15-->
+    <tr style="display: none;">
+    <!--
     <tr>
+    -->
       <td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
       <td><input type="text" name="lastname" value="" class="large-field" /></td>
     </tr>
+    <!--2015/04/15-->
+    <tr style="display: none;">
+    <!--
     <tr>
+    -->    
       <td><?php echo $entry_company; ?></td>
       <td><input type="text" name="company" value="" class="large-field" /></td>
     </tr>
     <?php if ($company_id_display) { ?>
+    <!--2015/04/15-->
+    <tr style="display: none;">
+    <!--
     <tr>
+    -->    
       <td><?php if ($company_id_required) { ?>
         <span class="required">*</span>
         <?php } ?>
@@ -40,6 +52,7 @@
       <td><input type="text" name="company_id" value="" class="large-field" /></td>
     </tr>
     <?php } ?>
+    
     <?php if ($tax_id_display) { ?>
     <tr>
       <td><?php if ($tax_id_required) { ?>
@@ -53,11 +66,19 @@
       <td><span class="required">*</span> <?php echo $entry_address_1; ?></td>
       <td><input type="text" name="address_1" value="" class="large-field" /></td>
     </tr>
+    <!--2015/04/15-->
+    <tr style="display: none;">
+    <!--
     <tr>
+    -->
       <td><?php echo $entry_address_2; ?></td>
       <td><input type="text" name="address_2" value="" class="large-field" /></td>
     </tr>
+    <!--2015/04/15-->
+    <tr style="display: none;">
+    <!--
     <tr>
+    -->
       <td><span class="required">*</span> <?php echo $entry_city; ?></td>
       <td><input type="text" name="city" value="" class="large-field" /></td>
     </tr>
@@ -65,7 +86,11 @@
       <td><span id="payment-postcode-required" class="required">*</span> <?php echo $entry_postcode; ?></td>
       <td><input type="text" name="postcode" value="" class="large-field" /></td>
     </tr>
+    <!--2015/04/15-->
+    <tr style="display: none;">
+    <!--
     <tr>
+    -->
       <td><span class="required">*</span> <?php echo $entry_country; ?></td>
       <td><select name="country_id" class="large-field">
           <option value=""><?php echo $text_select; ?></option>
@@ -78,7 +103,11 @@
           <?php } ?>
         </select></td>
     </tr>
+    <!--2015/04/15-->
+    <tr style="display: none;">
+    <!--    
     <tr>
+     -->
       <td><span class="required">*</span> <?php echo $entry_zone; ?></td>
       <td><select name="zone_id" class="large-field">
         </select></td>

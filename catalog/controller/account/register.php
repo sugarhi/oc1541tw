@@ -351,10 +351,10 @@ class ControllerAccountRegister extends Controller {
     	if ((utf8_strlen($this->request->post['firstname']) < 1) || (utf8_strlen($this->request->post['firstname']) > 32)) {
       		$this->error['firstname'] = $this->language->get('error_firstname');
     	}
-
-    	if ((utf8_strlen($this->request->post['lastname']) < 1) || (utf8_strlen($this->request->post['lastname']) > 32)) {
-      		$this->error['lastname'] = $this->language->get('error_lastname');
-    	}
+//2015/04/15
+//		if ((utf8_strlen($this->request->post['lastname']) < 1) || (utf8_strlen($this->request->post['lastname']) > 32)) {
+//			$this->error['lastname'] = $this->language->get('error_lastname');
+//		}
 
     	if ((utf8_strlen($this->request->post['email']) > 96) || !preg_match('/^[^\@]+@.*\.[a-z]{2,6}$/i', $this->request->post['email'])) {
       		$this->error['email'] = $this->language->get('error_email');
@@ -395,9 +395,10 @@ class ControllerAccountRegister extends Controller {
       		$this->error['address_1'] = $this->language->get('error_address_1');
     	}
 
-    	if ((utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 128)) {
-      		$this->error['city'] = $this->language->get('error_city');
-    	}
+//2015/04/15
+//		if ((utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 128)) {
+//			$this->error['city'] = $this->language->get('error_city');
+//		}
 
 		$this->load->model('localisation/country');
 		
@@ -419,10 +420,11 @@ class ControllerAccountRegister extends Controller {
     	if ($this->request->post['country_id'] == '') {
       		$this->error['country'] = $this->language->get('error_country');
     	}
-		
-    	if ($this->request->post['zone_id'] == '') {
-      		$this->error['zone'] = $this->language->get('error_zone');
-    	}
+
+//2015/04/15		
+//    	if ($this->request->post['zone_id'] == '') {
+//			$this->error['zone'] = $this->language->get('error_zone');
+//		}
 
     	if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {
       		$this->error['password'] = $this->language->get('error_password');

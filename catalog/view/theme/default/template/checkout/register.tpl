@@ -4,10 +4,14 @@
   <input type="text" name="firstname" value="" class="large-field" />
   <br />
   <br />
+  <!--2015/04/15 -->
+  <input type="text" name="lastname" value="" class="large-field" style="display: none;"/>
+  <!--
   <span class="required">*</span> <?php echo $entry_lastname; ?><br />
   <input type="text" name="lastname" value="" class="large-field" />
   <br />
   <br />
+  -->
   <span class="required">*</span> <?php echo $entry_email; ?><br />
   <input type="text" name="email" value="" class="large-field" />
   <br />
@@ -16,10 +20,14 @@
   <input type="text" name="telephone" value="" class="large-field" />
   <br />
   <br />
+  <!--2015/04/15 -->  
+  <input type="text" name="fax" value="" class="large-field"  style="display: none;"/>  
+  <!--
   <?php echo $entry_fax; ?><br />
   <input type="text" name="fax" value="" class="large-field" />
   <br />
   <br />
+  -->  
   <h2><?php echo $text_your_password; ?></h2>
   <span class="required">*</span> <?php echo $entry_password; ?><br />
   <input type="password" name="password" value="" class="large-field" />
@@ -33,10 +41,14 @@
 </div>
 <div class="right">
   <h2><?php echo $text_your_address; ?></h2>
+   <!--2015/04/15 -->
+   <input type="text" name="company" value="" class="large-field"  style="display: none;"/>
+   <!--
   <?php echo $entry_company; ?><br />
   <input type="text" name="company" value="" class="large-field" />
   <br />
   <br />
+  -->   
   <div style="display: <?php echo (count($customer_groups) > 1 ? 'table-row' : 'none'); ?>;">
   <?php echo $entry_customer_group; ?><br />
   <?php foreach ($customer_groups as $customer_group) { ?>
@@ -52,11 +64,15 @@
   <?php } ?>
   <br />
 </div>
+ <!--2015/04/15 -->
+ <input type="text" name="company_id" value="" class="large-field"  style="display: none;"/>
+<!--
 <div id="company-id-display"><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?><br />
   <input type="text" name="company_id" value="" class="large-field" />
   <br />
   <br />
 </div>
+ -->  
 <div id="tax-id-display"><span id="tax-id-required" class="required">*</span> <?php echo $entry_tax_id; ?><br />
   <input type="text" name="tax_id" value="" class="large-field" />
   <br />
@@ -66,20 +82,32 @@
 <input type="text" name="address_1" value="" class="large-field" />
 <br />
 <br />
+<!--2015/04/15 -->
+<input type="text" name="address_2" value="" class="large-field"  style="display: none;"/>
+<!--
 <?php echo $entry_address_2; ?><br />
 <input type="text" name="address_2" value="" class="large-field" />
 <br />
 <br />
+-->
+<!--2015/04/15 -->
+<input type="text" name="city" value="" class="large-field" style="display: none;"/>
+<!--
 <span class="required">*</span> <?php echo $entry_city; ?><br />
 <input type="text" name="city" value="" class="large-field" />
 <br />
 <br />
+-->
 <span id="payment-postcode-required" class="required">*</span> <?php echo $entry_postcode; ?><br />
 <input type="text" name="postcode" value="<?php echo $postcode; ?>" class="large-field" />
 <br />
 <br />
+<!--2015/04/15 -->
+<select name="country_id" class="large-field" style="display: none;">
+<!--
 <span class="required">*</span> <?php echo $entry_country; ?><br />
 <select name="country_id" class="large-field">
+-->
   <option value=""><?php echo $text_select; ?></option>
   <?php foreach ($countries as $country) { ?>
   <?php if ($country['country_id'] == $country_id) { ?>
@@ -91,11 +119,17 @@
 </select>
 <br />
 <br />
+<!--2015/04/15 -->
+<select name="zone_id" class="large-field" style="display: none;">
+    <option value=""></option>
+</select>
+<!--
 <span class="required">*</span> <?php echo $entry_zone; ?><br />
 <select name="zone_id" class="large-field">
 </select>
 <br />
 <br />
+-->
 <br />
 </div>
 <div style="clear: both; padding-top: 15px; border-top: 1px solid #EEEEEE;">
