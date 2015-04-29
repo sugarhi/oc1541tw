@@ -63,7 +63,7 @@ $_['text_sale']              = '訂單與會員管理';
 $_['text_shipping']          = '配送(Shipping)';
 $_['text_setting']           = '商店設置(Settings)';
 $_['text_stock_status']      = '庫存狀態(Stock Statuses)';
-$_['text_support']                     = '官方論壇(Support Forum)</a></li><li class="support"><a onclick="window.open(\'http://www.dnono.com\');">'. DNONO_SUPPORT;
+$_['text_support']                     = '官方論壇(Support Forum)';
 $_['text_system']            = '系統管理';
 $_['text_tax']                         = '稅務(Taxes)';
 $_['text_tax_class']         = '稅率類別(Tax Classes)';
